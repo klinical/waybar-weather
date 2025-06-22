@@ -60,8 +60,7 @@ fn main() {
                         output = format!("{}° F", json.current.temp_f);
                     }
                 }
-                println!("{{ \"text\": \"{}\", \"alt\": \"NA\", \"tooltip\": \"tooltip\", \"class\": \"$class\", \"percentage\":\
-                 100 }}", output);
+                println!("{}", output);
             },
             _ => panic!("{}", response.status()),
         }
@@ -71,7 +70,6 @@ fn main() {
 }
 
 fn read_config() -> Config {
-    // -key etc -zip etc -unit etc
     let args = env::args().collect::<Vec<String>>();
     let mut key: Option<String> = None;
     let mut zipcode: Option<String> = None;
@@ -79,7 +77,7 @@ fn read_config() -> Config {
 
     for i in 0..args.len() {
         if i == 0 {
-            continue; // Skip the first argument which is the program name
+            continue;
         }
         if args[i] == "-key" && i + 1 < args.len() {
             key = Some(args[i + 1].clone());
