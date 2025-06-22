@@ -2,4 +2,4 @@ Small Rust applet that simply outputs the current temperature for your zipcode. 
 
 Requires a https://www.weatherapi.com API key
 
-Usage: waybar-weather -key <YOUR KEY> -zip <ZIPCODE> -unit <f/c>
+Usage: `waybar-weather -key <YOUR KEY> -zip <ZIPCODE> -unit <f/c>`
