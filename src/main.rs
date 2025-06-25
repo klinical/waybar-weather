@@ -19,54 +19,102 @@ struct Condition {
 #[derive(Deserialize)]
 #[allow(non_camel_case_types)]
 enum WeatherCondition {
+    #[serde(rename = "Sunny")]
     Sunny,
+    #[serde(rename = "Partly cloudy")]
     Partly_cloudy,
+    #[serde(rename = "Cloudy")]
     Cloudy,
+    #[serde(rename = "Overcast")]
     Overcast,
+    #[serde(rename = "Mist")]
     Mist,
+    #[serde(rename = "Patchy rain possible")]
     Patchy_rain_possible,
+    #[serde(rename = "Patchy snow possible")]
     Patchy_snow_possible,
+    #[serde(rename = "Patchy sleet possible")]
     Patchy_sleet_possible,
+    #[serde(rename = "Patchy freezing drizzle possible")]
     Patchy_freezing_drizzle_possible,
+    #[serde(rename = "Thundery outbreaks possible")]
     Thundery_outbreaks_possible,
+    #[serde(rename = "Blowing snow")]
     Blowing_snow,
+    #[serde(rename = "Blizzard")]
     Blizzard,
+    #[serde(rename = "Fog")]
     Fog,
+    #[serde(rename = "Freezing fog")]
     Freezing_fog,
+    #[serde(rename = "Patchy light drizzle")]
     Patchy_light_drizzle,
+    #[serde(rename = "Light drizzle")]
     Light_drizzle,
+    #[serde(rename = "Freezing drizzle")]
     Freezing_drizzle,
+    #[serde(rename = "Heavy freezing drizzle")]
     Heavy_freezing_drizzle,
+    #[serde(rename = "Patchy light rain")]
     Patchy_light_rain,
+    #[serde(rename = "Light rain")]
     Light_rain,
+    #[serde(rename = "Moderate rain at times")]
     Moderate_rain_at_times,
+    #[serde(rename = "Moderate rain")]
     Moderate_rain,
+    #[serde(rename = "Heavy rain at times")]
     Heavy_rain_at_times,
+    #[serde(rename = "Heavy rain")]
     Heavy_rain,
+    #[serde(rename = "Light freezing rain")]
     Light_freezing_rain,
+    #[serde(rename = "Moderate or heavy freezing rain")]
     Moderate_or_heavy_freezing_rain,
+    #[serde(rename = "Light sleet")]
     Light_sleet,
+    #[serde(rename = "Moderate or heavy sleet")]
     Moderate_or_heavy_sleet,
+    #[serde(rename = "Patchy light snow")]
     Patchy_light_snow,
+    #[serde(rename = "Light snow")]
     Light_snow,
+    #[serde(rename = "Patchy moderate snow")]
     Patchy_moderate_snow,
+    #[serde(rename = "Moderate snow")]
     Moderate_snow,
+    #[serde(rename = "Patchy heavy snow")]
     Patchy_heavy_snow,
+    #[serde(rename = "Heavy snow")]
     Heavy_snow,
+    #[serde(rename = "Ice pellets")]
     Ice_pellets,
+    #[serde(rename = "Light rain shower")]
     Light_rain_shower,
+    #[serde(rename = "Moderate or heavy rain shower")]
     Moderate_or_heavy_rain_shower,
+    #[serde(rename = "Torrential rain shower")]
     Torrential_rain_shower,
+    #[serde(rename = "Light sleet showers")]
     Light_sleet_showers,
+    #[serde(rename = "Moderate or heavy sleet showers")]
     Moderate_or_heavy_sleet_showers,
+    #[serde(rename = "Light snow showers")]
     Light_snow_showers,
+    #[serde(rename = "Moderate or heavy snow showers")]
     Moderate_or_heavy_snow_showers,
+    #[serde(rename = "Light showers of ice pellets")]
     Light_showers_of_ice_pellets,
+    #[serde(rename = "Moderate or heavy showers of ice pellets")]
     Moderate_or_heavy_showers_of_ice_pellets,
+    #[serde(rename = "Patchy light rain with thunder")]
     Patchy_light_rain_with_thunder,
+    #[serde(rename = "Moderate or heavy rain with thunder")]
     Moderate_or_heavy_rain_with_thunder,
+    #[serde(rename = "Patchy light snow with thunder")]
     Patchy_light_snow_with_thunder,
-    Moderate_or_heavy_snow_with_thunder
+    #[serde(rename = "Moderate or heavy snow with thunder")]
+    Moderate_or_heavy_snow_with_thunder,
 }
 
 impl Display for WeatherCondition {
