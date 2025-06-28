@@ -19,15 +19,12 @@ struct Condition {
 #[derive(Deserialize)]
 #[allow(non_camel_case_types)]
 enum WeatherCondition {
-    #[serde(rename = "Sunny")]
+    Clear,
     Sunny,
     #[serde(rename = "Partly cloudy")]
     Partly_cloudy,
-    #[serde(rename = "Cloudy")]
     Cloudy,
-    #[serde(rename = "Overcast")]
     Overcast,
-    #[serde(rename = "Mist")]
     Mist,
     #[serde(rename = "Patchy rain possible")]
     Patchy_rain_possible,
@@ -41,9 +38,7 @@ enum WeatherCondition {
     Thundery_outbreaks_possible,
     #[serde(rename = "Blowing snow")]
     Blowing_snow,
-    #[serde(rename = "Blizzard")]
     Blizzard,
-    #[serde(rename = "Fog")]
     Fog,
     #[serde(rename = "Freezing fog")]
     Freezing_fog,
@@ -120,6 +115,7 @@ enum WeatherCondition {
 impl Display for WeatherCondition {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let x = match self {
+            WeatherCondition::Clear => "",
             WeatherCondition::Sunny => "",
             WeatherCondition::Partly_cloudy => "",
             WeatherCondition::Cloudy => "",
