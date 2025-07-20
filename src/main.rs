@@ -36,6 +36,8 @@ enum WeatherCondition {
     Patchy_freezing_drizzle_possible,
     #[serde(rename = "Thundery outbreaks possible")]
     Thundery_outbreaks_possible,
+    #[serde(rename = "Thundery outbreaks in nearby")]
+    Thunder_outbreaks_in_nearby,
     #[serde(rename = "Blowing snow")]
     Blowing_snow,
     Blizzard,
@@ -126,6 +128,7 @@ impl Display for WeatherCondition {
             WeatherCondition::Patchy_sleet_possible => "",
             WeatherCondition::Patchy_freezing_drizzle_possible => "",
             WeatherCondition::Thundery_outbreaks_possible => "",
+            WeatherCondition::Thunder_outbreaks_in_nearby => "",
             WeatherCondition::Blowing_snow => "",
             WeatherCondition::Blizzard => "",
             WeatherCondition::Fog => "󰖑",
